@@ -113,7 +113,7 @@ section {
       padding: 4rem 2rem;
       min-height: 100vh;
     }
-.quienes,{
+.quienes{
       color: #000000;  
       background-color: white;
       border-radius: 10px;
@@ -273,3 +273,4 @@ section {
     70%{margin-left: -200%;}
 
   }
+
