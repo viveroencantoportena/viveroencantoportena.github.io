@@ -109,7 +109,24 @@ header {
     top: -20px; 
 }
 
-
+section {
+      padding: 4rem 2rem;
+      min-height: 100vh;
+    }
+.quienes,{
+      color: #000000;  
+      background-color: white;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .texto-justificado {
+        text-align: justify;
+    }
 
 /* Animaciones */
 .animate {
@@ -254,4 +271,5 @@ header {
   
     50%{margin-left: -200%;}
     70%{margin-left: -200%;}
+
   }
