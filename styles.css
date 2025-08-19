@@ -1,0 +1,257 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #66BB6A;
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-img {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    border: 5px solid #2C5F2D;
+    background-color: #2C5F2D;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B2FF59;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #2C5F2D;
+    color: white;
+    border-radius: 40px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+/* Contenido principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    height: 80vh;
+}
+
+.logo-imagen {
+    max-width: 70%;
+    max-height: 20%;
+    margin-top: -80px;
+    position: relative;
+    top: -20px; 
+}
+
+
+
+/* Animaciones */
+.animate {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: all 1s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #66BB6A;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    background-color: #e0f2e9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-price {
+    background-color: #2C5F2D;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.product-desc {
+    padding: 0 10px 10px 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.stock-status {
+    margin-bottom: 10px;
+}
+
+.in-stock {
+    color: green;
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+
+.slider-frame{
+    width: 100%;
+    height: auto;
+    margin: 100px auto 0;
+    overflow: hidden;
+  
+  
+  }
+  
+  .slider-frame ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 300%;
+    
+    animation: slide 15s infinite alternate ease-in-out;
+  
+  }
+  
+  .slider-frame li {
+    list-style: none;
+    width: 100%;
+  }
+  
+  .slider-frame img {
+    width: 100vw;
+    height: auto;
+  }
+  
+  @keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+  
+    25%{margin-left: -100%;}
+    40%{margin-left: -100%;}
+  
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+  }
