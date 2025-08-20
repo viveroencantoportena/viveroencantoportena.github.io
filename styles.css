@@ -62,13 +62,18 @@ header {
 }
 
 .dropdown-content li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 5px 16px;
     text-decoration: none;
-    display: block;
-    color: #333;
+    color: inherit;
     transition: all 0.3s ease;
 }
 
+.dropdown-content li img {
+  display: inline-block;
+}
 .dropdown-content li a:hover {
     background-color: #2C5F2D;
     color: white;
@@ -273,4 +278,5 @@ section {
     70%{margin-left: -200%;}
 
   }
+
 
