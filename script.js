@@ -62,23 +62,6 @@ const productos = [
     
 ];
 
-const productos = [
-      {
-        imagen: "https://acdn.mitiendanube.com/stores/003/960/867/products/cola-de-zorro-1-5f48256d8be95c761317102650874453-1024-1024.jpg",
-        nombre: "Cola de Zorro",
-        precio: "$20000",
-        enStock: true,
-        descripcion: "Esta planta acuática es conocida como mil hojas de agua, bejuquillo, cola de zorro o pinito de agua."
-      },
-      {
-        imagen: "https://obliqua.mx/cdn/shop/products/Helecho_nido_deave.jpg?v=1593623558",
-        nombre: "Nido de Ave",
-        precio: "$15000",
-        enStock: false,
-        descripcion: "Ideal para interiores, fácil de cuidar y resiste a la sequía por largos periodos de tiempo."
-      }
-    ];
-
     // Mostrar todos al inicio
     window.onload = () => renderResults(productos);
 
@@ -201,3 +184,4 @@ document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 
 autoSlide();
+
