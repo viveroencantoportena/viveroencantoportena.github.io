@@ -62,6 +62,56 @@ const productos = [
     
 ];
 
+const productos = [
+      {
+        imagen: "https://acdn.mitiendanube.com/stores/003/960/867/products/cola-de-zorro-1-5f48256d8be95c761317102650874453-1024-1024.jpg",
+        nombre: "Cola de Zorro",
+        precio: "$20000",
+        enStock: true,
+        descripcion: "Esta planta acuática es conocida como mil hojas de agua, bejuquillo, cola de zorro o pinito de agua."
+      },
+      {
+        imagen: "https://obliqua.mx/cdn/shop/products/Helecho_nido_deave.jpg?v=1593623558",
+        nombre: "Nido de Ave",
+        precio: "$15000",
+        enStock: false,
+        descripcion: "Ideal para interiores, fácil de cuidar y resiste a la sequía por largos periodos de tiempo."
+      }
+    ];
+
+    // Mostrar todos al inicio
+    window.onload = () => renderResults(productos);
+
+    function searchStock() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const filtrados = productos.filter(p => p.nombre.toLowerCase().includes(input));
+      renderResults(filtrados);
+    }
+
+    function renderResults(lista) {
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (lista.length === 0) {
+        resultsDiv.innerHTML = "<p>No se encontraron resultados.</p>";
+        return;
+      }
+
+      lista.forEach(prod => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+
+        div.innerHTML = `
+          <img src="${prod.imagen}" alt="${prod.nombre}">
+          <h3>${prod.nombre}</h3>
+          <p class="precio">${prod.precio}</p>
+          <span class="stock ${prod.enStock}">${prod.enStock ? "En stock" : "Agotado"}</span>
+          <p>${prod.descripcion}</p>
+        `;
+        resultsDiv.appendChild(div);
+      });
+    }
+
 // Selecciona el contenedor donde se mostrarán los productos
 const productosContainer = document.querySelector('.productos-container');
 
@@ -149,4 +199,5 @@ function autoSlide() {
 document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
+
 autoSlide();
