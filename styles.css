@@ -107,8 +107,8 @@ header {
 }
 
 .logo-imagen {
-    max-width: 70%;
-    heigth: auto;
+    max-width: auto;
+    heigth: 50%;
     display: block;
     margin: 0 auto;
     
@@ -341,6 +341,7 @@ section {
     70%{margin-left: -200%;}
 
   }
+
 
 
 
