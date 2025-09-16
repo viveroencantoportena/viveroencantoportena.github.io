@@ -63,10 +63,10 @@ const productosPorCategoria = {
 
         {
             imagen: "https://drive.google.com/file/d/13YfZ6WKh3A-QnxKCIcyQ5E3YZjqxjEAr/view?usp=drive_link",
-            nombre: "Helecho de espada",
+            nombre: "Repollitos",
             precio: "$18000",
             enStock: true,
-            descripcion: "En su hábitat natural, puede crecer hasta 210 cm de alto. Es un helecho fácil y popular para cultivar en interiores."
+            descripcion: "Suculenta con forma de repollo, facil de cuidar."
         },
     ],
     cactus: [
@@ -276,6 +276,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
