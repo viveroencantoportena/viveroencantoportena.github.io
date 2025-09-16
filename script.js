@@ -31,19 +31,43 @@ burger.addEventListener('click', () => {
 const productosPorCategoria = {
     helechos: [
         {
-            imagen: "https://obliqua.mx/cdn/shop/products/Helecho_nido_deave.jpg?v=1593623558",
-            nombre: "Nido de Ave",
-            precio: "$15000",
-            enStock: false,
-            descripcion: "Ideal para interiores, fácil de cuidar y resiste a la sequía."
+            imagen: "https://drive.google.com/file/d/1M-4cq1_LRLsogao2nO57XrR7Kqi5vEA2/view?usp=drive_link",
+            nombre: "Palo de agua 3L",
+            precio: "$14000",
+            enStock: true,
+            descripcion: "Puede alcanzar varios metros de altura, se adapta bien a luz indirecta o sombra parcial, <br> y su cultivo favorece la purificación del aire y la creación de un ambiente de tranquilidad, <br>lo que la hace popular para la decoración del hogar. ."
         },
         {
-            imagen: "https://hortology.co.uk/cdn/shop/files/Doryopteris-pedata-Digit-Fern-12x35cm_1600x.jpg?v=1692104801",
-            nombre: "Flora del Conosur",
+            imagen: "https://drive.google.com/file/d/1dKJJF9urIM3Al7gqXaXIr6FoQcQAZjfQ/view?usp=drive_link",
+            nombre: "Anglonoema",
+            precio: "$50000",
+            enStock: true,
+            descripcion: "Planta decorativa."
+        },
+
+        {
+            imagen: "https://drive.google.com/file/d/1mfWe3QgEXWqU5YSqldTT91tecV4UeREM/view?usp=drive_link",
+            nombre: "Gomero",
+            precio: "$30000",
+            enStock: true,
+            descripcion: "hojas grandes, gruesas y brillantes, de color verde oscuro, y su tronco macizo."
+        },
+
+        {
+            imagen: "https://drive.google.com/file/d/1X2qhl4KAdxBOutA0NA7EL7FEXgpS3FzT/view?usp=drive_link",
+            nombre: "Helecho de espada",
             precio: "$18000",
             enStock: true,
-            descripcion: "Planta decorativa que se adapta a lugares con poca luz."
-        }
+            descripcion: "En su hábitat natural, puede crecer hasta 210 cm de alto. Es un helecho fácil y popular para cultivar en interiores."
+        },
+
+        {
+            imagen: "https://drive.google.com/file/d/13YfZ6WKh3A-QnxKCIcyQ5E3YZjqxjEAr/view?usp=drive_link",
+            nombre: "Helecho de espada",
+            precio: "$18000",
+            enStock: true,
+            descripcion: "En su hábitat natural, puede crecer hasta 210 cm de alto. Es un helecho fácil y popular para cultivar en interiores."
+        },
     ],
     cactus: [
         {
@@ -56,12 +80,50 @@ const productosPorCategoria = {
     ],
     flores: [
         {
-            imagen: "https://example.com/flor.jpg",
-            nombre: "Rosa Roja",
-            precio: "$10000",
+            imagen: "https://drive.google.com/file/d/1JGLOYvoX1sQO3tDsKli0OdaWAdZNleO6/view?usp=drive_link",
+            nombre: "Azalea",
+            precio: "$14000",
             enStock: true,
             descripcion: "Clásica flor para decoración."
-        }
+        },
+         {
+            imagen: "https://drive.google.com/file/d/1_sLECWwE9PvPzATBhTfIyqytDSsPb2SE/view?usp=drive_link",
+            nombre: "Sphatifilium",
+            precio: "$13000",
+            enStock: true,
+            descripcion: "Clásica flor para decoración."
+        },
+
+         {
+            imagen: "https://drive.google.com/file/d/1gZqQTetmLnFPi3Km-pEOfwyG7zAavraB/view?usp=drive_link",
+            nombre: "Kalanchoes",
+            precio: "$13000",
+            enStock: true,
+            descripcion: "Clásica flor para decoración."
+        },
+
+         {
+            imagen: "https://drive.google.com/file/d/1XBrIRD_q_hxV5zWSRTQEgzd5EVAQmz1k/view?usp=drive_link",
+            nombre: "Kala de color",
+            precio: "$13000",
+            enStock: true,
+            descripcion: "Kala de color lila."
+        },
+         {
+            imagen: "https://drive.google.com/file/d/1YTFX41lkDq9Hvvc7Z0IvfQFGVKp3sq7v/view?usp=drive_link",
+            nombre: "Kala de color",
+            precio: "$13000",
+            enStock: true,
+            descripcion: "Kala de color naranja."
+        },
+
+        {
+            imagen: "https://drive.google.com/file/d/1LpLq8FazcTHMDM-m5c_oCYBbrrd8Am-N/view?usp=drive_link",
+            nombre: "Orquídeas",
+            precio: "$13000",
+            enStock: true,
+            descripcion: "Hermosa flor para regalar."
+        },
     ],
     frutales: [
         {
@@ -214,6 +276,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
