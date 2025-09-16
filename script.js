@@ -31,14 +31,14 @@ burger.addEventListener('click', () => {
 const productosPorCategoria = {
     helechos: [
         {
-            imagen: "https://drive.google.com/file/d/1M-4cq1_LRLsogao2nO57XrR7Kqi5vEA2/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0008.jpg?raw=true",
             nombre: "Palo de agua 3L",
             precio: "$14000",
             enStock: true,
             descripcion: "Puede alcanzar varios metros de altura, se adapta bien a luz indirecta o sombra parcial, <br> y su cultivo favorece la purificación del aire y la creación de un ambiente de tranquilidad, <br>lo que la hace popular para la decoración del hogar. ."
         },
         {
-            imagen: "https://drive.google.com/file/d/1dKJJF9urIM3Al7gqXaXIr6FoQcQAZjfQ/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0009.jpg?raw=true",
             nombre: "Anglonoema",
             precio: "$50000",
             enStock: true,
@@ -46,7 +46,7 @@ const productosPorCategoria = {
         },
 
         {
-            imagen: "https://drive.google.com/file/d/1mfWe3QgEXWqU5YSqldTT91tecV4UeREM/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0010.jpg?raw=true",
             nombre: "Gomero",
             precio: "$30000",
             enStock: true,
@@ -54,7 +54,7 @@ const productosPorCategoria = {
         },
 
         {
-            imagen: "https://drive.google.com/file/d/1X2qhl4KAdxBOutA0NA7EL7FEXgpS3FzT/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0012.jpg?raw=true",
             nombre: "Helecho de espada",
             precio: "$18000",
             enStock: true,
@@ -62,7 +62,7 @@ const productosPorCategoria = {
         },
 
         {
-            imagen: "https://drive.google.com/file/d/13YfZ6WKh3A-QnxKCIcyQ5E3YZjqxjEAr/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0017.jpg?raw=true",
             nombre: "Repollitos",
             precio: "$18000",
             enStock: true,
@@ -80,14 +80,14 @@ const productosPorCategoria = {
     ],
     flores: [
         {
-            imagen: "https://drive.google.com/file/d/1JGLOYvoX1sQO3tDsKli0OdaWAdZNleO6/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0007.jpg?raw=true",
             nombre: "Azalea",
             precio: "$14000",
             enStock: true,
             descripcion: "Clásica flor para decoración."
         },
          {
-            imagen: "https://drive.google.com/file/d/1_sLECWwE9PvPzATBhTfIyqytDSsPb2SE/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0011.jpg?raw=true",
             nombre: "Sphatifilium",
             precio: "$13000",
             enStock: true,
@@ -95,7 +95,7 @@ const productosPorCategoria = {
         },
 
          {
-            imagen: "https://drive.google.com/file/d/1gZqQTetmLnFPi3Km-pEOfwyG7zAavraB/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0013.jpg?raw=true",
             nombre: "Kalanchoes",
             precio: "$13000",
             enStock: true,
@@ -103,14 +103,14 @@ const productosPorCategoria = {
         },
 
          {
-            imagen: "https://drive.google.com/file/d/1XBrIRD_q_hxV5zWSRTQEgzd5EVAQmz1k/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0014.jpg?raw=true",
             nombre: "Kala de color",
             precio: "$13000",
             enStock: true,
             descripcion: "Kala de color lila."
         },
          {
-            imagen: "https://drive.google.com/file/d/1YTFX41lkDq9Hvvc7Z0IvfQFGVKp3sq7v/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0015.jpg?raw=true",
             nombre: "Kala de color",
             precio: "$13000",
             enStock: true,
@@ -118,7 +118,7 @@ const productosPorCategoria = {
         },
 
         {
-            imagen: "https://drive.google.com/file/d/1LpLq8FazcTHMDM-m5c_oCYBbrrd8Am-N/view?usp=drive_link",
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0018.jpg?raw=true",
             nombre: "Orquídeas",
             precio: "$13000",
             enStock: true,
@@ -276,6 +276,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
