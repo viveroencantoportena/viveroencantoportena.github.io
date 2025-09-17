@@ -44,7 +44,13 @@ const productosPorCategoria = {
             enStock: true,
             descripcion: "Planta decorativa."
         },
-
+         {
+            imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0009.jpg?raw=true",
+            nombre: "Anglonoema",
+            precio: "$18000",
+            enStock: true,
+            descripcion: "Planta decorativa."
+        },
         {
             imagen: "https://github.com/viveroencantoportena/viveroencantoportena.github.io/blob/main/fotosstock/IMG-20250916-WA0010.jpg?raw=true",
             nombre: "Gomero",
@@ -276,6 +282,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
