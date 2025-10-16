@@ -2,17 +2,20 @@
 // ANIMACIONES AL CARGAR
 // =============================
 window.onload = () => {
-    // Animaciones
     document.querySelectorAll('.animate').forEach(element => {
         element.classList.add('show');
     });
 
-    // Detectar categoría y mostrar productos
-    const categoria = getCategoriaActual();
-    if (categoria) {
-        renderResults(productosPorCategoria[categoria]);
-        renderProductos();
-    }
+    const categorias = getCategoriaActual();
+    const todosLosProductos = [];
+
+    categorias.forEach(cat => {
+        if (productosPorCategoria[cat]) {
+            todosLosProductos.push(...productosPorCategoria[cat]);
+        }
+    });
+
+    renderResults(todosLosProductos);
 };
 
 // =============================
@@ -283,6 +286,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
