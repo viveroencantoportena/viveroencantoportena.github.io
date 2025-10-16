@@ -156,7 +156,7 @@ const productosPorCategoria = {
 // =============================
 function getCategoriaActual() {
     const pagina = window.location.pathname.split("/").pop().toLowerCase();
-    if (pagina.includes("index")) return "helechos", "cactus", "flores", "frutales", "jardineria";
+    if (pagina.includes("index")) return ["helechos", "cactus", "flores", "frutales", "jardineria"];
     if (pagina.includes("elechos")) return "helechos";
     if (pagina.includes("cactus")) return "cactus";
     if (pagina.includes("flores")) return "flores";
@@ -283,6 +283,7 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
 
 
 
