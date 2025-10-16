@@ -169,6 +169,20 @@ function getCategoriaActual() {
 }
 
 // =============================
+// DETECTAR CATEGORÍA SEGÚN URL
+// =============================
+function getCategoriaActual() {
+    const pagina = window.location.pathname.split("/").pop().toLowerCase();
+    if (pagina.includes("index")) return ["helechos", "cactus", "flores", "frutales", "jardineria"];
+    if (pagina.includes("helechos")) return ["helechos"];
+    if (pagina.includes("cactus")) return ["cactus"];
+    if (pagina.includes("flores")) return ["flores"];
+    if (pagina.includes("frutales")) return ["frutales"];
+    if (pagina.includes("jardineria")) return ["jardineria"];
+    return [];
+}
+
+// =============================
 // RENDERIZAR RESULTADOS DE BÚSQUEDA
 // =============================
 function renderResults(lista) {
@@ -188,7 +202,9 @@ function renderResults(lista) {
           <img src="${prod.imagen}" alt="${prod.nombre}">
           <h3>${prod.nombre}</h3>
           <p class="precio">${prod.precio}</p>
-          <span class="stock ${prod.enStock}">${prod.enStock ? "En stock" : "Agotado"}</span>
+          <span class="stock ${prod.enStock ? 'in-stock' : 'out-of-stock'}">
+              ${prod.enStock ? "En stock" : "Agotado"}
+          </span>
           <p>${prod.descripcion}</p>
         `;
         resultsDiv.appendChild(div);
@@ -196,13 +212,24 @@ function renderResults(lista) {
 }
 
 // =============================
-// FUNCIÓN DE BÚSQUEDA
+// FUNCIÓN DE BÚSQUEDA (AHORA FUNCIONA TAMBIÉN EN INDEX)
 // =============================
 function searchStock() {
     const input = document.getElementById("searchInput").value.toLowerCase();
-    const categoria = getCategoriaActual();
-    const lista = productosPorCategoria[categoria] || [];
-    const filtrados = lista.filter(p => p.nombre.toLowerCase().includes(input));
+    const categorias = getCategoriaActual();
+    let todosLosProductos = [];
+
+    categorias.forEach(cat => {
+        if (productosPorCategoria[cat]) {
+            todosLosProductos.push(...productosPorCategoria[cat]);
+        }
+    });
+
+    const filtrados = todosLosProductos.filter(p =>
+        p.nombre.toLowerCase().includes(input) ||
+        p.descripcion.toLowerCase().includes(input)
+    );
+
     renderResults(filtrados);
 }
 
@@ -212,10 +239,16 @@ function searchStock() {
 const productosContainer = document.querySelector('.productos-container');
 
 function renderProductos() {
-    const categoria = getCategoriaActual();
-    const lista = productosPorCategoria[categoria] || [];
+    const categorias = getCategoriaActual();
+    let todosLosProductos = [];
 
-    lista.forEach(producto => {
+    categorias.forEach(cat => {
+        if (productosPorCategoria[cat]) {
+            todosLosProductos.push(...productosPorCategoria[cat]);
+        }
+    });
+
+    todosLosProductos.forEach(producto => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
 
@@ -249,6 +282,26 @@ function renderProductos() {
         productosContainer.appendChild(productCard);
     });
 }
+
+// =============================
+// CARGAR PRODUCTOS AL ENTRAR
+// =============================
+window.onload = () => {
+    const categorias = getCategoriaActual();
+    let todosLosProductos = [];
+
+    categorias.forEach(cat => {
+        if (productosPorCategoria[cat]) {
+            todosLosProductos.push(...productosPorCategoria[cat]);
+        }
+    });
+
+    // Si tenés un contenedor con id="results"
+    renderResults(todosLosProductos);
+
+    // Si además usás .productos-container
+    renderProductos();
+};
 
 // =============================
 // CARRUSEL
@@ -286,6 +339,8 @@ document.getElementById('prev').addEventListener('click', () => moveSlide(-1));
 document.getElementById('next').addEventListener('click', () => moveSlide(1));
 showSlide(currentSlide);
 autoSlide();
+
+
 
 
 
